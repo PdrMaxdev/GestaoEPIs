@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de EPIs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciamento de EPIs</h1>
+
+        <!-- Cadastro de Equipamentos -->
+        <section>
+            <h2>Cadastro de Equipamentos</h2>
+            <form id="equipmentForm">
+                <label for="equipmentId">ID do Equipamento:</label>
+                <input type="text" id="equipmentId" required>
+
+                <label for="equipmentName">Nome do Equipamento:</label>
+                <input type="text" id="equipmentName" required>
+
+                <label for="equipmentExpiry">Data de Validade:</label>
+                <input type="date" id="equipmentExpiry" required>
+
+                <button type="submit">Adicionar Equipamento / Atualizar</button>
+            </form>
+        </section>
+
+        <!-- Cadastro de Colaboradores -->
+        <section>
+            <h2>Cadastro de Colaboradores</h2>
+            <form id="collaboratorForm">
+                <label for="collaboratorId">ID do Colaborador:</label>
+                <input type="text" id="collaboratorId" required>
+
+                <label for="collaboratorName">Nome do Colaborador:</label>
+                <input type="text" id="collaboratorName" required>
+
+                <button type="submit">Adicionar Colaborador / Atualizar</button>
+            </form>
+        </section>
+
+        <!-- Cadastro de Usuários -->
+        <section>
+            <h2>Cadastro de Usuários</h2>
+            <form id="userForm">
+                <label for="userId">ID do Usuário:</label>
+                <input type="text" id="userId" required>
+
+                <label for="userName">Nome do Usuário:</label>
+                <input type="text" id="userName" required>
+
+                <label for="userPassword">Senha:</label>
+                <input type="password" id="userPassword" required>
+
+                <button type="submit">Adicionar Usuário / Atualizar</button>
+            </form>
+        </section>
+
+        <!-- Empréstimo de Equipamentos -->
+        <section>
+            <h2>Empréstimo de Equipamentos</h2>
+            <form id="loanForm">
+                <label for="loanEquipmentId">ID do Equipamento:</label>
+                <input type="text" id="loanEquipmentId" required>
+
+                <label for="loanCollaboratorId">ID do Colaborador:</label>
+                <input type="text" id="loanCollaboratorId" required>
+
+                <label for="loanDate">Data do Empréstimo:</label>
+                <input type="date" id="loanDate" required>
+
+                <button type="submit">Realizar Empréstimo / Atualizar</button>
+            </form>
+        </section>
+
+        <!-- Devolução de Equipamentos -->
+        <section>
+            <h2>Devolução de Equipamentos</h2>
+            <form id="returnForm">
+                <label for="returnEquipmentId">ID do Equipamento:</label>
+                <input type="text" id="returnEquipmentId" required>
+
+                <label for="returnCollaboratorId">ID do Colaborador:</label>
+                <input type="text" id="returnCollaboratorId" required>
+
+                <label for="returnDate">Data da Devolução:</label>
+                <input type="date" id="returnDate" required>
+
+                <button type="submit">Registrar Devolução</button>
+            </form>
+        </section>
+
+        <!-- Tabelas de Dados -->
+        <section>
+            <h2>Equipamentos</h2>
+            <table id="equipmentTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Data de Validade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Colaboradores</h2>
+            <table id="collaboratorTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Usuários</h2>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Empréstimos</h2>
+            <table id="loanTable">
+                <thead>
+                    <tr>
+                        <th>ID do Equipamento</th>
+                        <th>ID do Colaborador</th>
+                        <th>Data do Empréstimo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Devoluções</h2>
+            <table id="returnTable">
+                <thead>
+                    <tr>
+                        <th>ID do Equipamento</th>
+                        <th>ID do Colaborador</th>
+                        <th>Data da Devolução</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
